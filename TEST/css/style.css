@@ -15,7 +15,7 @@ body {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 20 px;
+  padding: 20px;
 }
 
 .header {
@@ -23,7 +23,12 @@ body {
   padding: 10px;
   border-bottom: 1px solid #2f3136;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
 }
 
 .header-right {
@@ -44,6 +49,10 @@ body {
 
 .login-btn {
   background-color: #ffa07a;
+}
+
+.tree-btn {
+  background-color: #34c759;
 }
 
 .btn:hover {
