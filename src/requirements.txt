@@ -1,1 +1,6 @@
-
+Flask
+Flask-SocketIO
+Flask-OAuthlib
+pika
+ecdh
+sqlite3
