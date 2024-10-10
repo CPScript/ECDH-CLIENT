@@ -1,1 +1,148 @@
-place holder
+body {
+  background-color: #36393f;
+ color: #dcddde;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  background-color: #2f3136;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  text-align: center;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #b9bbbe;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #40444b;
+  color: #dcddde;
+}
+
+.input-field::placeholder {
+  color: #72767d;
+}
+
+.password-hint {
+  display: block;
+  color: #b9bbbe;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #7289da;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #5b6eae;
+}
+
+.btn-secondary {
+  background-color: #4f545c;
+}
+
+.btn-secondary:hover {
+  background-color: #3b3f45;
+}
+
+.chat-log {
+  display: none; /* Initially hidden until login is successful */
+  margin-top: 20px;
+  background-color: #292b2f;
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.info-section {
+  width: 100%;
+  background-color: #2f3136;
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.info-text {
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.info-text.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.register-panel {
+  background-color: #2f3136;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  text-align: center;
+}
+
+.register-panel h1 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.register-panel p {
+  color: #b9bbbe;
+  margin-bottom: 20px;
+}
+
+.register-panel .input-field {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #40444b;
+  color: #dcddde;
+}
+
+.register-panel .btn {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #7289da;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
