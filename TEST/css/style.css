@@ -1,8 +1,8 @@
 body {
-  background-color: #2f3136;
+  background-color: #36393f;
   color: #dcddde;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin:  0;
+  margin: 0 ;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -10,10 +10,14 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   max-width: 800px;
-  margin: 0 auto;
+  background-color: #2f3136;
   padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  text-align: center;
 }
 
 .top-bar {
@@ -38,18 +42,19 @@ body {
 }
 
 .btn {
-  background-color: #4f545c;
-  color: #dcddde;
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  border-radius: 5px;
+  background-color: #7289da;
+  color: #ffffff;
   cursor: pointer;
-  margin: 0 10px;
-  border-radius: 50%;
+  transition: background-color 0.2s;
 }
 
 .btn:hover {
-  background-color: #5f656d;
+  background-color: #5b6eae;
 }
 
 .tree-list-btn {
