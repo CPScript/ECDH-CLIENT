@@ -1,37 +1,49 @@
 // js/script.js
 const usernameInput = document.getElementById('username');
-const messageInput = document.getElementById('message');
-const sendButton = document.getElementById('send');
+const passwordInput = document.getElementById('password');
+const loginButton = document.getElementById('login');
+const registerButton = document.getElementById('register');
 const chatLog = document.getElementById('chat-log');
 
-sendButton.addEventListener('click', async () => {
+loginButton.addEventListener('click', async () => {
   const username = usernameInput.value;
-  const message = messageInput.value;
+  const password = passwordInput.value;
 
-  // Send request to backend to send message
-  const response = await fetch('/send', {
+  // Send request to backend to login
+  const response = await fetch('/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username, message }),
+    body: JSON.stringify({ username, password }),
   });
 
   const data = await response.json();
-  chatLog.innerHTML += `<p>${username}: ${message}</p>`;
-  messageInput.value = '';
+  if (data.success) {
+    // Login successful, establish WebSocket connection
+    const socket = new WebSocket('ws://localhost:8080');
+    socket.onmessage = (event) => {
+      const message = event.data;
+      chatLog.innerHTML += `<p>${message}</p>`;
+    };
+  } else {
+    console.error('Login failed');
+  }
 });
 
-// Add event listener for receiving messages
-socket.onmessage = (event) => {
-  const message = event.data;
-  chatLog.innerHTML += `<p>${message}</p>`;
-};
+registerButton.addEventListener('click', async () => {
+  const username = usernameInput.value;
+  const password = passwordInput.value;
 
-// Establish a connection with the backend
-const socket = new WebSocket('ws://localhost:8080');
+  // Send request to backend to register
+  const response = await fetch('/register', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password }),
+  });
 
-// Send a request to the backend to register the user
-fetch('/register', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ username: usernameInput.value }),
+  const data = await response.json();
+  if (data.success) {
+    console.log('Registration successful');
+  } else {
+    console.error('Registration failed');
+  }
 });
