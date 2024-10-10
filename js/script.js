@@ -33,8 +33,7 @@ registerButton.addEventListener('click', async () => {
   const username = usernameInput.value;
   const password = passwordInput.value;
 
-  // Send request to backend to register
-  const response = await fetch('/register', {
+  const response = await fetch('/register', { // Send request to backend to register
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password }),
