@@ -2,7 +2,6 @@
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
 const loginButton = document.getElementById('login');
-const registerButton = document.getElementById('register');
 const chatLog = document.getElementById('chat-log');
 
 loginButton.addEventListener('click', async () => {
@@ -27,8 +26,4 @@ loginButton.addEventListener('click', async () => {
   } else {
     console.error('Login failed');
   }
-});
-
-registerButton.addEventListener('click', async () => {
-  <a href="/src/doc/register/index.html"> // not a good way to call another script from a diffrent directory, will change later
 });
