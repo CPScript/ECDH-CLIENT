@@ -1,14 +1,15 @@
-// src/doc/register/js/script.js
+// src/doc/register/script.js
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
-const registerButton = document.getElementById('register');
+const loginButton = document.getElementById('login');
+const chatLog = document.getElementById('chat-log');
 
-
-registerButton.addEventListener('click', async () => {
+loginButton.addEventListener('click', async () => {
   const username = usernameInput.value;
   const password = passwordInput.value;
 
-  const response = await fetch('/register', { // Send request to backend to register
+  // Send request to backend to login
+  const response = await fetch('/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password }),
@@ -16,8 +17,7 @@ registerButton.addEventListener('click', async () => {
 
   const data = await response.json();
   if (data.success) {
-    console.log('Registration successful');
-  } else {
-    console.error('Registration failed');
-  }
-});
+    // Login successful, establish WebSocket connection
+    const socket = new WebSocket('ws://localhost:8080');
+    socket.onmessage = (event) => {
+      const message
