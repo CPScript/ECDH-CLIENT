@@ -1,12 +1,6 @@
-# Dockerfile
-FROM python:3.9-slim
+# rabbitmq/Dockerfile
+FROM rabbitmq:3-management
 
-WORKDIR /app
+COPY rabbitmq.conf /etc/rabbitmq/rabbitmq.conf
 
-COPY requirements.txt .
-
-RUN pip install -r requirements.txt
-
-COPY . .
-
-CMD ["python", "app.py"]
+CMD ["rabbitmq-server"]
