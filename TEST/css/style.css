@@ -1,1 +1,97 @@
+body {
+  background-color: #36393f;
+  color: #dcddde;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+}
 
+.sidebar {
+  background-color: #2f3136;
+  width: 250px;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0 .2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar h1 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.sidebar .btn {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  background-color: #2f3136;
+  padding: 10px;
+  border-bottom: 1px solid #2f3136;
+  display: flex;
+  justify-content: center;
+}
+
+.header h2 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.info-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.info-text {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.info-text h2 {
+  margin-top: 0;
+}
+
+.info-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-text li {
+  margin-bottom: 10px;
+}
+
+.info-text strong {
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #4f545c;
+  color: #dcddde;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.btn:hover {
+  background-color: #5f656d;
+}
