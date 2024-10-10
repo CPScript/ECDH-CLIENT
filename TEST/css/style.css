@@ -17,35 +17,16 @@ body {
 }
 
 .header {
-  background-color: #2f3136;
-  padding : 10px;
+  width: 100%;
+  background-color : #2f3136;
+  padding: 10px;
   border-bottom: 1px solid #2f3136;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-left {
-  margin-right: 20px;
-}
-
-.header-image {
-  width: 100%;
-  height: 100px; /* Adjust the height according to your image */
-  background-size: cover;
-  background-position: center;
-  margin: 0 auto;
-  display: block;
-}
-
-.header-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.header-right {
+.header-buttons {
   display: flex;
   align-items: center;
 }
@@ -58,6 +39,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   margin: 0 10px;
+  border-radius: 50%;
 }
 
 .btn:hover {
@@ -72,6 +54,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   margin: 0 10px;
+  border-radius: 50%;
 }
 
 .tree-list-btn:hover {
@@ -81,6 +64,60 @@ body {
 .tree-list-btn i {
   font-size: 18px;
   margin-right: 10px;
+}
+
+.login-btn {
+  background-color: #ffa07a;
+  color: #dcddde;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+
+.login-btn:hover {
+  background-color: #ff9900;
+}
+
+.register-btn {
+  background-color: #4f545c;
+  color: #dcddde;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+
+.register-btn:hover {
+  background-color: #5f656d;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-container {
+  width: 100%;
+  height: 200px; 
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .info-section {
