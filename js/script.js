@@ -8,7 +8,8 @@ sendButton.addEventListener('click', async () => {
   const username = usernameInput.value;
   const message = messageInput.value;
 
-  const response = await fetch('/send', {   // Send request to backend to send message
+  // Send request to backend to send message
+  const response = await fetch('/send', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, message }),
@@ -17,4 +18,20 @@ sendButton.addEventListener('click', async () => {
   const data = await response.json();
   chatLog.innerHTML += `<p>${username}: ${message}</p>`;
   messageInput.value = '';
+});
+
+// Add event listener for receiving messages
+socket.onmessage = (event) => {
+  const message = event.data;
+  chatLog.innerHTML += `<p>${message}</p>`;
+};
+
+// Establish a connection with the backend
+const socket = new WebSocket('ws://localhost:8080');
+
+// Send a request to the backend to register the user
+fetch('/register', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ username: usernameInput.value }),
 });
