@@ -9,6 +9,9 @@
 <body>
   <div class="container">
     <div class="header">
+      <div class="header-left">
+        <button class="btn tree-btn" id="tree-button">Tree</button>
+      </div>
       <div class="header-right">
         <button class="btn login-btn" id="login-button">Login</button>
         <button class="btn" id="register-button">Register</button>
@@ -61,6 +64,11 @@
 
     document.getElementById('register-button').addEventListener('click', () => {
       window.location.href = 'src/doc/register/index.html';
+    });
+
+    document.getElementById('tree-button').addEventListener('click', () => {
+      // Add functionality for the tree button here
+      console.log('Tree button clicked!');
     });
   </script>
 </body>
