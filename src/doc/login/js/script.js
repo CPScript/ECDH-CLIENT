@@ -1,4 +1,4 @@
-// js/script.js
+// src/doc/login/js/script.js
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
 const loginButton = document.getElementById('login');
