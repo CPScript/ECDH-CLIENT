@@ -1,17 +1,24 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Chat</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord-Like Chat</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Chat</h1>
-  <input id="username" type="text" placeholder="Username">
-  <input id="password" type="password" placeholder="Password">
-  <button id="login">Login</button>
-  <button id="register">Register</button>
-  <div id="chat-log"></div>
+  <div class="container">
+    <div class="login-panel">
+      <h1>Welcome Back!</h1>
+      <p>We're so excited to see you again!</p>
+      <input id="username" type="text" placeholder="Username" class="input-field">
+      <input id="password" type="password" placeholder="Password" class="input-field">
+      <button id="login" class="btn">Login</button>
+      <button id="register" class="btn btn-secondary">Register</button>
+    </div>
+    <div id="chat-log" class="chat-log">
+    </div>
+  </div>
 
   <script src="js/script.js"></script>
 </body>
