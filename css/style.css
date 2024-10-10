@@ -10,98 +10,64 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 400px;
-  background-color: #2f3136;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  margin-top: 50px;
-  text-align: center;
 }
 
-h1 {
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-p {
-  color: #b9bbbe;
-  margin-bottom: 20px;
-}
-
-.input-field {
-  width: calc(100% - 20px);
+.header {
+  background-color: #2f3136;
   padding: 10px;
-  margin: 10px 0 5px;
-  border: none;
-  border-radius: 5px;
-  background-color: #40444b;
-  color: #dcddde;
+  border-bottom: 1px solid #2f3136;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.input-field::placeholder {
-  color: #72767d;
-}
-
-.password-hint {
-  display: block;
-  color: #b9bbbe;
-  font-size: 12px;
-  margin-bottom: 15px;
+.header-right {
+  display: flex ;
+  align-items: center;
 }
 
 .btn {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin: 5px 0;
+  background-color: #4f545c;
+  color: #dcddde;
   border: none;
-  border-radius: 5px;
-  background-color: #7289da;
-  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  margin: 0 10px;
 }
 
 .btn:hover {
-  background-color: #5b6eae;
-}
-
-.btn-secondary {
-  background-color: #4f545c;
-}
-
-.btn-secondary:hover {
-  background-color: #3b3f45;
-}
-
-.chat-log {
-  display: none; /* Initially hidden until login is successful */
-  margin-top: 20px;
-  background-color: #292b2f;
-  padding: 10px;
-  border-radius: 5px;
-  max-height: 300px;
-  overflow-y: auto;
+  background-color: #5f656d;
 }
 
 .info-section {
-  width: 100%;
-  background-color: #2f3136;
   padding: 20px;
-  margin-top: 50px;
   text-align: center;
 }
 
 .info-text {
   max-width: 600px;
   margin: 0 auto;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  text-align: left;
 }
 
-.info-text.in-view {
-  opacity: 1;
-  transform: translateY(0);
+.info-text h2 {
+  margin-top: 0;
+}
+
+.info-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-text li {
+  margin-bottom: 10px;
+}
+
+.info-text strong {
+  font-weight: bold;
 }
