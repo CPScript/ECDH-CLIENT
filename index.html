@@ -13,6 +13,7 @@
       <p>We're so excited to see you again!</p>
       <input id="username" type="text" placeholder="Username" class="input-field">
       <input id="password" type="password" placeholder="Password" class="input-field">
+      <small class="password-hint">Please create a secure password</small>
       <button id="login" class="btn">Login</button>
       <button id="register" class="btn btn-secondary">Register</button>
     </div>
@@ -21,7 +22,7 @@
     </div>
   </div>
 
-  <div class="info-section">
+  <div class="info-section" id="info">
     <div class="info-text">
       <h2>About This Software</h2>
       <p>This chat application offers a secure and private way to communicate with your friends. With end-to-end encryption, your conversations remain confidential. Enjoy a seamless and user-friendly interface inspired by Discord, making your chatting experience enjoyable and efficient.</p>
@@ -29,5 +30,19 @@
   </div>
 
   <script src="js/script.js"></script>
+  <script>
+    // JavaScript to trigger the floating effect when the section is scrolled into view
+    document.addEventListener('DOMContentLoaded', function() {
+      const infoText = document.querySelector('.info-text');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      });
+      observer.observe(infoText);
+    });
+  </script>
 </body>
 </html>
