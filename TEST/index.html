@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ECDH Chat</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <div class="header-buttons">
+    <div class="top-bar">
+      <div class="top-bar-left">
         <button class="btn tree-list-btn">
           <i class="fas fa-list-ul"></i>
         </button>
+      </div>
+      <div class="top-bar-right">
         <button class="btn login-btn" id="login-button">Login</button>
         <button class="btn register-btn" id="register-button">Register</button>
       </div>
@@ -68,6 +71,10 @@
 
       document.getElementById('register-button').addEventListener('click', () => {
         window.location.href = 'src/doc/register/index.html';
+      });
+
+      document.querySelector('.tree-list-btn').addEventListener('click', () => {
+        alert('Tree button clicked!');
       });
     </script>
   </div>
