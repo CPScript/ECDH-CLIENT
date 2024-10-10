@@ -1,3 +1,9 @@
+// src/doc/register/js/script.js
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const registerButton = document.getElementById('register');
+
+
 registerButton.addEventListener('click', async () => {
   const username = usernameInput.value;
   const password = passwordInput.value;
