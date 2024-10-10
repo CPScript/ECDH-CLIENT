@@ -33,7 +33,7 @@ p {
 .input-field {
   width: calc(100% - 20px);
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px 0 5px;
   border: none;
   border-radius: 5px;
   background-color: #40444b;
@@ -44,10 +44,17 @@ p {
   color: #72767d;
 }
 
+.password-hint {
+  display: block;
+  color: #b9bbbe;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
 .btn {
   width: calc(100% - 20px);
   padding: 10px;
-  margin: 10px 0;
+  margin: 5px 0;
   border: none;
   border-radius: 5px;
   background-color: #7289da;
@@ -82,7 +89,7 @@ p {
   width: 100%;
   background-color: #2f3136;
   padding: 20px;
-  margin-top: 50px;
+  margin -top: 50px;
   text-align: center;
 }
 
@@ -94,7 +101,7 @@ p {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.info-section:target .info-text {
+.info-text.in-view {
   opacity: 1;
   transform: translateY(0);
 }
