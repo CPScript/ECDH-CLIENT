@@ -91,7 +91,7 @@ body {
 }
 
 @keyframes fadeIn {
-  0% {
+  20% {
     opacity: 0;
   }
   100% {
