@@ -1,83 +1,86 @@
 body {
-  background-color: #36393f;
-  color: #dcddde;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
+ background-color: #36393f;
+ color: #dcddde;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ margin: 0;
+ padding: 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ opacity: 0;
+ animation: fadeIn 1s forwards;
 }
 
 .header {
-  background-color: #2f3136;
-  padding: 10px;
-  border-bottom: 1px solid #2f3136;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+ background-color: #2f3136;
+ padding: 10px;
+ border-bottom: 1px solid #2f3136;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
 }
 
 .header-left {
-  display: flex;
-  align-items: center;
+ display: flex;
+ align-items: center;
 }
 
 .header-right {
-  display: flex;
-  align-items: center;
+ display: flex;
+ align-items: center;
 }
 
 .btn {
-  background-color: #4f545c;
-  color: #dcddde;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 0 10px;
-  transition: background-color 0.3s ease;
+ background-color: #4f545c;
+ color: #dcddde;
+ border: none;
+ padding: 10px 20px;
+ font-size: 16px;
+ cursor: pointer;
+ margin: 0 10px;
+ transition: background-color 0.3s ease;
 }
 
 .login-btn {
-  background-color: #ffa07a;
+ background-color: #ffa07a;
 }
 
 .tree-btn {
-  background-color: #34c759;
+ background-color: #34c759;
 }
 
 .btn:hover {
-  background-color: #5f656d;
+ background-color: #5f656d;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
 }
 
 .info-section {
-  width: 75%;
-  padding: 20px;
-  background-color: #2f3136;
-  border: 1px solid #2f3136;
-  margin: 20px;
+ width: 75%;
+ padding: 20px;
+ background-color: #2f3136;
+ border: 1px solid #2f3136;
+ margin: 20px;
 }
 
 .right-section {
-  width: 20%;
-  padding: 20px;
-  background-color: #2f3136;
-  border: 1px solid #2f3136;
-  margin: 20px;
+ width: 20%;
+ padding: 20px;
+ background-color: #2f3136;
+ border: 1px solid #2f3136;
+ margin: 20px;
 }
 
 .info-text {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: justify;
+ max-width: 700px;
+ margin: 0 auto;
+ text-align: center;
+}
+
+.empty-space {
+ width: 5%;
 }
