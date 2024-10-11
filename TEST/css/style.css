@@ -13,7 +13,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
@@ -24,44 +24,48 @@ body {
   border-bottom: 1px solid #2f3136;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
-.header-left {
+.header-image {
+  width: 100%;
+  height: 100px;
+  background-color: #2f3136;
+  padding: 10px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.header-right {
+.header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
   display: flex;
-  align-items: center;
-}
-
-.btn {
-  background-color: #4f545c;
-  color: #dcddde;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 0 10px;
-  transition: background-color 0.3s ease;
-}
-
-.login-btn {
-  background-color: #ffa07a;
-}
-
-.tree-btn {
-  background-color: #34c759;
-}
-
-.btn:hover {
-  background-color: #5f656d;
-}
-
-.info-section {
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 20px;
-  text-align: center;
+}
+
+.description-box {
+  width: 75%;
+  padding: 20px;
+  background-color: #2f3136;
+  border: 1px solid #2f3136;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.download-box {
+  width: 20%;
+  padding: 20px;
+  background-color: #2f3136;
+  border: 1px solid #2f3136;
+  border-radius: 10px;
+  margin: 20px;
 }
 
 .info-text {
