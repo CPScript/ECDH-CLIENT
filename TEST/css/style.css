@@ -3,7 +3,7 @@ body {
   color: #dcddde;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 0 ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,17 +11,11 @@ body {
   animation: fadeIn 1s forwards;
 }
 
-.container {
-  width: 120%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 .header {
   background-color: #2f3136;
   padding: 10px;
   border-bottom: 1px solid #2f3136;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -59,9 +53,18 @@ body {
   background-color: #5f656d;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .info-section {
+  width: 75%;
   padding: 20px;
-  text-align: center;
+  background-color: #2f3136;
+  border: 1px solid #2f3136;
+  margin: 20px;
 }
 
 .info-text {
@@ -88,6 +91,10 @@ body {
 
 .info-text strong {
   font-weight: bold;
+}
+
+.empty-space {
+  width: 20%;
 }
 
 @keyframes fadeIn {
